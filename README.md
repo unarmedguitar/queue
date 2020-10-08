@@ -86,7 +86,7 @@ Bugs are very annoying and can be found by anyone. You could have a unique case 
 ### Before reporting a bug.
 - Make sure you are running the latest version.
     - It is quite possible the bug was fixed in the newest version if you have not updated.
-- Check to make sure the bug has not already been reported. Check all the opened [issues](issues).
+- Check to make sure the bug has not already been reported. Check all the opened [issues](https://github.com/unarmedguitar/queue/issues).
     - If it has been reported you can subscribe to the issue to be notified and/or post any relevant information you may have on the bug.
 
 ## License
