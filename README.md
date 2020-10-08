@@ -90,4 +90,4 @@ Bugs are very annoying and can be found by anyone. You could have a unique case 
     - If it has been reported you can subscribe to the issue to be notified and/or post any relevant information you may have on the bug.
 
 ## License
-The queue plugin is licensed under the terms of the [![License](https://img.shields.io/badge/license-Apache--2.0-blue](https://opensource.org/licenses/Apache-2.0)
+The queue plugin is licensed under the terms of the [Apache-2.0](https://github.com/unarmedguitar/queue/blob/master/LICENSE)
