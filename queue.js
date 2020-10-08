@@ -115,6 +115,7 @@ module.exports = {
     cooldown: 0,
 
     execute(client, data) {
+        msg = "";
         let is_permitted = hasPermission(data.badges);
         let editted = false;
 
