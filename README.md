@@ -35,8 +35,8 @@ This is a viewer game **queue** plugin developed for [TrovoBot](https://github.c
 **These options can *only* be invoked by the streamer or moderators of the channel:**
 - **open** - Opens the queue.
 - **close** - Closes the queue.
-- **next** - Call the next person in the queue.
-- **clear** - Remove everyone from the queue.
+- **next** - Calls the next person in the queue.
+- **clear** - Removes everyone from the queue.
 - **add *@user*** - Adds *user* into the queue.
 - **remove *@user*** - Removes *user* from the queue.
 - **promote *@user*** - Promotes *user* to front of the queue.

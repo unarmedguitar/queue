@@ -24,8 +24,9 @@ class Queue extends Array {
         return super.splice(0);
     }
     add(user) {
+        user = user.toLowerCase();
         if (!this.inQueue(user)) {
-            super.push(user);
+            super.push();
         }
         return this.position(user);
     }
@@ -35,6 +36,7 @@ class Queue extends Array {
     promote(user) {
         let cur_len = this.length;
         let new_len = 0;
+        user = user.toLowerCase();
         if (this.inQueue(user)) {
             new_len = super.unshift(this.leave(user));
         }
@@ -44,6 +46,7 @@ class Queue extends Array {
         if (this.isClosed()) {
             return -1;
         }
+        user = user.toLowerCase();
         if (!this.inQueue(user)) {
             super.push(user);
         }
@@ -51,13 +54,14 @@ class Queue extends Array {
     }
     leave(user) {
         let leaver = "Nobody";
+        user = user.toLowerCase()
         if (this.inQueue(user)) {
             leaver = super.splice(this.position(user), 1);
         }
         return leaver;
     }
     position(user) {
-        return super.indexOf(user);
+        return super.indexOf(user.toLowerCase());
     }
     list() {
         return super.join(", ");
@@ -72,7 +76,7 @@ class Queue extends Array {
         return this.length === 0;
     }
     inQueue(user) {
-        return this.position(user) >= 0;
+        return this.position(user.toLowerCase()) >= 0;
     }
 }
 
@@ -115,9 +119,11 @@ module.exports = {
     cooldown: 0,
 
     execute(client, data) {
-        msg = "";
         let is_permitted = hasPermission(data.badges);
         let editted = false;
+        msg = "";
+        len = 0;
+        pos = 0;
 
         switch (data.args[0]) {
             case "close":
@@ -242,7 +248,9 @@ module.exports = {
                 msg = `Usage: !${this.command} <commands> - commands: ${commands})`;
                 break;
         }
-        sendMessage(client, msg);
+        if (msg) {
+            sendMessage(client, msg);
+        }
         if (editted) {
             fs.writeFile(data_path, JSON.stringify(queue), err => {
                 if (err) {
