@@ -26,7 +26,7 @@ class Queue extends Array {
     add(user) {
         user = user.toLowerCase();
         if (!this.inQueue(user)) {
-            super.push();
+            super.push(user);
         }
         return this.position(user);
     }
