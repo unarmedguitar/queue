@@ -36,7 +36,6 @@ class Queue extends Array {
     promote(user) {
         let cur_len = this.length;
         let new_len = 0;
-        user = user.toLowerCase();
         if (this.inQueue(user)) {
             new_len = super.unshift(this.leave(user));
         }
@@ -54,7 +53,6 @@ class Queue extends Array {
     }
     leave(user) {
         let leaver = "Nobody";
-        user = user.toLowerCase()
         if (this.inQueue(user)) {
             leaver = super.splice(this.position(user), 1);
         }
@@ -76,7 +74,7 @@ class Queue extends Array {
         return this.length === 0;
     }
     inQueue(user) {
-        return this.position(user.toLowerCase()) >= 0;
+        return this.position(user) >= 0;
     }
 }
 
@@ -244,8 +242,9 @@ module.exports = {
                     msg = `@${user} is next. Please get ready.`;
                 }
                 break;
+            case "help":
             default:
-                msg = `Usage: !${this.command} <commands> - commands: ${commands})`;
+                msg = `Usage: !${this.command} <commands> - commands: ${commands}`;
                 break;
         }
         if (msg) {
