@@ -15,7 +15,7 @@ class Queue extends Array {
         return this._closed = true;
     }
     open() {
-        return !(this._closed = false);
+        return (!this._closed = false);
     }
     next() {
         return super.shift();
