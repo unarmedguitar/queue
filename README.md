@@ -6,12 +6,14 @@ This is a viewer game **queue** plugin developed for [TrovoBot](https://github.c
 
 ## Content
 1. [Quick Install](#quick-install)
-2. [Command](#command)
-3. [Viewer Options](#viewer-options)
-4. [Moderator Options](#moderator-options)
-5. [Gettings Started](#getting-started)
-6. [Reporting A Bug](#reporting-a-bug)
-7. [License](#license)
+2. [Features](#features)
+3. [Command](#command)
+4. [Viewer Options](#viewer-options)
+5. [Moderator Options](#moderator-options)
+6. [Gettings Started](#getting-started)
+7. [Reporting A Bug](#reporting-a-bug)
+8. [Contributing](#contributing)
+8. [License](#license)
 
 ## Quick Install
 1. **Install** [TrovoBot](https://github.com/unarmedguitar/TrovoBot/)
@@ -19,6 +21,10 @@ This is a viewer game **queue** plugin developed for [TrovoBot](https://github.c
 3. **Extract** *queue-master.zip* into your **TrovoBot/plugins/** folder.
 4. **Rename** `queue-master` folder to `queue` inside your **TrovoBot/plugins/** folder.
     - Alternative [INSTALL](https://github.com/unarmedguitar/queue/blob/master/INSTALL.md) instructions in more details.
+
+## Features
+
+- Persistent Queue. Your queue is stored even if the bot goes down so you do not lose your list.
 
 ### Command
     !queue [OPTION [[@]user]]
@@ -74,7 +80,7 @@ The queue is **closed** by default each time you *load* your TrovoBot. To start 
     - *Moderator:* `!queue promote @Viewer4` 
     - *TrovoBot:* @Viewer4 is now next in line.
 - To **close** the queue: 
-    - *Moderator:* `!queue open` 
+    - *Moderator:* `!queue close` 
     - *TrovoBot:* The queue has been closed.
 - To **clear** the queue:
     - *Moderator:* `!queue clear`
@@ -88,6 +94,10 @@ Bugs are very annoying and can be found by anyone. You could have a unique case 
     - It is quite possible the bug was fixed in the newest version if you have not updated.
 - Check to make sure the bug has not already been reported. Check all the opened [issues](https://github.com/unarmedguitar/queue/issues).
     - If it has been reported you can subscribe to the issue to be notified and/or post any relevant information you may have on the bug.
+
+## Contributing
+
+Feel free to contribute or suggest your ideas or improvements.
 
 ## License
 The queue plugin is licensed under the terms of the [Apache-2.0](https://github.com/unarmedguitar/queue/blob/master/LICENSE)
